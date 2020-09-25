@@ -3,7 +3,7 @@ Football apps adalah aplikasi jadwal pertandingan bola by liga dan melihat team 
 
 
 #Screenshot
-![text](https://drive.google.com/file/d/1tBYCE36WN73VZoYcZLYz_1GMy2LQLyrI/view?usp=sharing)
+![text](https://ipfs.io/ipfs/QmXqsytRjQduJYurHGY1Nngk9MQDXhL5Xr84t9wwLuyGQ4)
 
 #Fitur-fitur yang di sediakan
 - [X] Favorite team dan event match
