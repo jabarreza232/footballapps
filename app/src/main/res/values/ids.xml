@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="team_Badge" type="id" />
+    <item name="team_name" type="id" />
+    <item name="date" type="id" />
+    <item name="team_Home" type="id" />
+    <item name="team_away" type="id" />
+    <item name="date1" type="id" />
+    <item name="list_event" type="id" />
+    <item name="list_favorite" type="id" />
+    <item name="team_badge" type="id" />
+    <item name="btn_favorite_teams" type="id" />
+</resources>

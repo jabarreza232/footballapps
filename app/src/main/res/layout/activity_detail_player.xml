@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.detail.player.DetailPlayerActivity">
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:id="@+id/img_fanart"
+        android:layout_marginBottom="16dp"
+    />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/nama_player"
+    android:textAlignment="center"
+    android:id="@+id/name_player1"
+    android:textSize="18sp"
+    android:layout_marginBottom="16dp"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:textAlignment="center"
+            android:text="@string/weight_kg"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:text="@string/height_m"
+            android:textAlignment="center"
+
+            />
+
+
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:textAlignment="center"
+            android:text="@string/_0"
+            android:textColor="@color/colorPrimaryDark"
+android:textSize="25sp"
+            android:id="@+id/weight_player1"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"
+            android:id="@+id/height_player1"
+            />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forward"
+        android:textAlignment="center"
+        android:textColor="#606060"
+        android:layout_marginBottom="10dp"
+        android:textSize="17sp"
+        android:id="@+id/detail_posisi"
+
+        />
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deskripsi"
+        android:id="@+id/description_player"
+android:padding="16dp"
+        />
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>
+</ScrollView>
