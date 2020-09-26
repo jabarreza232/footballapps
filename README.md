@@ -3,13 +3,9 @@ Football apps adalah aplikasi jadwal pertandingan bola by liga dan melihat team 
 
 
 # Screenshot
-<style>
-ul#list-menu li{
-  display:inline;
-}
-</style>
 
-<ul id="list-menu">
+
+<ul style="display:inline;">
   <li><img src="https://ipfs.io/ipfs/QmXqsytRjQduJYurHGY1Nngk9MQDXhL5Xr84t9wwLuyGQ4" height="400px"/></li>
  <li><img src="https://ipfs.io/ipfs/QmRpYQEgEFk5WzQJgVvCNfqC6aqkfjcV1Sn2dncAEkjg7p" height="400px"/></li>
  <li><img src="https://ipfs.io/ipfs/QmewdLB7NE7ATUu3NNwwLKmcptReXahmHYRaxxuXgfXJmC" height="400px"/></li>
