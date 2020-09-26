@@ -29,6 +29,13 @@ class TeamFragment : Fragment(), TeamView {
     private lateinit var adapter: TeamAdapter
 
     private lateinit var leagueName: String
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_team, container, false)
+        setHasOptionsMenu(true)
+        return view
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val spinnerItems = resources.getStringArray(league)
@@ -50,23 +57,12 @@ class TeamFragment : Fragment(), TeamView {
 
             }
 
-
             override fun onNothingSelected(parent: AdapterView<*>) {}
 
         }
         swipeRefresh.onRefresh {
             presenter.getTeamList(leagueName)
         }
-
-
-
-
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_team, container, false)
-        setHasOptionsMenu(true)
-        return view
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
@@ -134,15 +130,17 @@ class TeamFragment : Fragment(), TeamView {
 
 */
     override fun showLoading() {
-        progressBar.visible()
+        list_team?.invisible()
+        progressBar?.visible()
     }
 
     override fun hideLoading() {
-        progressBar.invisible()
+        list_team?.visible()
+        progressBar?.invisible()
     }
 
     override fun showTeamList(data: List<Teams>?) {
-        swipeRefresh.isRefreshing = false
+        swipeRefresh?.isRefreshing = false
         teams.clear()
         if (data != null) {
             teams.addAll(data)

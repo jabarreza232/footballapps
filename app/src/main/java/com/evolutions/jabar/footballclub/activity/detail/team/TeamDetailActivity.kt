@@ -7,7 +7,10 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -67,7 +70,7 @@ class TeamDetailActivity : AppCompatActivity(), TeamDetailView {
                 scrollView {
                     isVerticalScrollBarEnabled = false
                     relativeLayout {
-                        lparams(width = matchParent, height = wrapContent)
+                        lparams(width = matchParent, height = matchParent)
                         linearLayout {
                             lparams(width = matchParent, height = wrapContent)
                             padding = dip(10)
@@ -101,7 +104,7 @@ class TeamDetailActivity : AppCompatActivity(), TeamDetailView {
                         progressBar = progressBar {
 
                         }.lparams {
-                            centerHorizontally()
+                            centerInParent()
                         }
 
 

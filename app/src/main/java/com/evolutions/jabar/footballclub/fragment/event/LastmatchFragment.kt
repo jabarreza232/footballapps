@@ -29,6 +29,14 @@ class LastmatchFragment : Fragment(), LastMatchView {
     private lateinit var adapter: LastMatchAdapter
 
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_lastmatch, container, false)
+        setHasOptionsMenu(true)
+        return view
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
@@ -63,16 +71,6 @@ class LastmatchFragment : Fragment(), LastMatchView {
         }
     }
 
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_lastmatch, container, false)
-        setHasOptionsMenu(true)
-        return view
-    }
-
-
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         // Inflate the options menu from XML
         inflater?.inflate(R.menu.search, menu)
@@ -102,16 +100,17 @@ class LastmatchFragment : Fragment(), LastMatchView {
 
 
     override fun showLoading() {
-        progressBarLast.visible()
-
+        list_last_match?.invisible()
+        progressBarLast?.visible()
     }
 
     override fun hideLoading() {
-        progressBarLast.invisible()
+        list_last_match?.visible()
+        progressBarLast?.invisible()
     }
 
     override fun showLastMatchList(data: List<Event>?) {
-        swipeRefreshLast.isRefreshing = false
+        swipeRefreshLast?.isRefreshing = false
         events.clear()
         if (data != null) {
             events.addAll(data)

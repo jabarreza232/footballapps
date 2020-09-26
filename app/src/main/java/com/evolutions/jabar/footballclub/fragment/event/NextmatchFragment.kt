@@ -35,6 +35,16 @@ class NextmatchFragment : Fragment(), NextmatchView {
     private var events: MutableList<Event> = mutableListOf()
     private lateinit var presenter: NextMatchPresenter
     private lateinit var adapter: NextMatchAdapter
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_nextmatch, container, false)
+        setHasOptionsMenu(true)
+        return view
+
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         adapter = NextMatchAdapter(requireContext(), events) {
@@ -70,15 +80,6 @@ class NextmatchFragment : Fragment(), NextmatchView {
 
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_nextmatch, container, false)
-        setHasOptionsMenu(true)
-        return view
-
-    }
-
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         // Inflate the options menu from XML
         inflater?.inflate(R.menu.search, menu)
@@ -106,21 +107,17 @@ class NextmatchFragment : Fragment(), NextmatchView {
     }
 
     override fun showLoading() {
-        if (progressBarNext != null) {
-            progressBarNext.visible()
-        }
+        list_next_match?.invisible()
+        progressBarNext?.visible()
     }
 
     override fun hideLoading() {
-        if (progressBarNext != null) {
-            progressBarNext.invisible()
-        }
+        list_next_match?.visible()
+        progressBarNext?.invisible()
     }
 
     override fun showNextMatchList(data: List<Event>?) {
-        if (swipeRefreshNext != null) {
-            swipeRefreshNext.isRefreshing = false
-        }
+        swipeRefreshNext?.isRefreshing = false
         Log.e("cek_data:", "${data?.size}")
         events.clear()
         if (data != null) {

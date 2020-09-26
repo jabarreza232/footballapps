@@ -32,16 +32,13 @@
                     android:id="@+id/list_team"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-                    />
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
                 <ProgressBar
                     android:id="@+id/progressBar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-                    />
+                    android:layout_centerInParent="true" />
 
             </RelativeLayout>
 
