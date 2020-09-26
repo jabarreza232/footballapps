@@ -32,19 +32,12 @@ class FavoriteTeamsFragment : Fragment() {
     private lateinit var adapter: FavoriteTeamsAdapter
     private lateinit var listEvent: RecyclerView
 
-    private lateinit var swipeRefresh: SwipeRefreshLayout
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         adapter = FavoriteTeamsAdapter(favorites) {
             requireContext().startActivity<TeamDetailActivity>("id" to "${it.teamId}")
         }
         listEvent.adapter = adapter
-        swipeRefresh.onRefresh {
-            showFavorite()
-        }
-
-
     }
 
     override fun onResume() {
@@ -56,7 +49,7 @@ class FavoriteTeamsFragment : Fragment() {
     private fun showFavorite() {
         favorites.clear()
         context?.database?.use {
-            swipeRefresh.isRefreshing = false
+
             val result = select(FavoriteTeams.TABLE_FAVORITE_TEAMS)
             val favorite = result.parseList(classParser<FavoriteTeams>())
             favorites.addAll(favorite)
@@ -89,20 +82,13 @@ class FavoriteTeamsFragment : Fragment() {
             rightPadding = dip(16)
             leftPadding = dip(16)
             orientation = LinearLayout.VERTICAL
-            swipeRefresh = swipeRefreshLayout {
-                setColorSchemeColors(R.attr.colorAccent,
-                        android.R.color.holo_green_light,
-                        android.R.color.holo_red_light,
-                        android.R.color.holo_orange_light
-                )
-                relativeLayout {
+            relativeLayout {
+                lparams(width = matchParent, height = wrapContent)
+                listEvent = recyclerView {
                     lparams(width = matchParent, height = wrapContent)
-                    listEvent = recyclerView {
-                        lparams(width = matchParent, height = wrapContent)
-                        layoutManager = LinearLayoutManager(ctx)
-                    }
-
+                    layoutManager = LinearLayoutManager(ctx)
                 }
+
             }
 
         }

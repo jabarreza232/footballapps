@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.evolutions.jabar.footballclub.R
 import com.evolutions.jabar.footballclub.fragment.favorite.adapter.PagerAdapterFavorite
-import kotlinx.android.synthetic.main.fragment_favorite2.*
+import kotlinx.android.synthetic.main.fragment_favorite.*
 
 class FavoriteFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_favorite2, container, false)
+        val view = inflater.inflate(R.layout.fragment_favorite, container, false)
         requireActivity().invalidateOptionsMenu()
         return view
     }
