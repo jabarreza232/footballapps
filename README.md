@@ -4,7 +4,7 @@ Football apps adalah aplikasi jadwal pertandingan bola by liga dan melihat team 
 
 # Screenshot
 <style>
-ul#list-menu {
+ul#list-menu li{
   display:inline;
 }
 </style>
