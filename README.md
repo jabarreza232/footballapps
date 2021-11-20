@@ -3,10 +3,10 @@ Football apps adalah aplikasi jadwal pertandingan bola by liga dan melihat team 
 
 # Screenshot
 <p float="left">
-<img src="https://drive.google.com/file/d/1rtAOJrp6faE7aCmwTECIsA8R6ymczZ-V/view?usp=sharing" height="400px"/> 
-<img src="https://drive.google.com/file/d/1xzmTfT56mRpA7wqhq7bnxbPCpUZG62cn/view?usp=sharing" height="400px"/>
-<img src="https://drive.google.com/file/d/1l8FPmi3HbwXfbntK7tBTI8ViqSjhnAYA/view?usp=sharing" height="400px"/>
-<img src="https://drive.google.com/file/d/1VSZNapxJOekdlF2q8EBJCXjxAW7Z7hAa/view?usp=sharing" height="400px"/>
+![Alt text](screenshot/ss1.jpg?raw=true "FootballApps")
+![Alt text](screenshot/ss2.jpg?raw=true "FootballApps")
+![Alt text](screenshot/ss3.jpg?raw=true "FootballApps")
+![Alt text](screenshot/ss4.jpg?raw=true "FootballApps")
 </p>
 
 # Fitur-fitur yang di sediakan
