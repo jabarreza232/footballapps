@@ -15,8 +15,7 @@
         app:tabIndicatorColor="#fff"
         app:tabSelectedTextColor="#fff"
         android:id="@+id/tab_favorite"
-        app:tabBackground="@color/colorPrimaryDark"
-        >
+        app:tabBackground="@color/colorPrimaryDark">
 
 
     </com.google.android.material.tabs.TabLayout>
