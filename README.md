@@ -3,9 +3,9 @@ Football apps adalah aplikasi jadwal pertandingan bola by liga dan melihat team 
 
 # Screenshot
 <p float="left">
-![Alt text](screenshot/ss1.jpg?raw=true "FootballApps")
-![Alt text](screenshot/ss2.jpg?raw=true "FootballApps")
-![Alt text](screenshot/ss3.jpg?raw=true "FootballApps")
+<img src="screenshot/ss1.jpg" height="400px"/>
+<img src="screenshot/ss1.jpg" height="400px"/>
+<img src="screenshot/ss1.jpg" height="400px"/>
 ![Alt text](screenshot/ss4.jpg?raw=true "FootballApps")
 </p>
 
