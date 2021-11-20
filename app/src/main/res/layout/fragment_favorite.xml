@@ -25,9 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pager_fav"
-        android:layout_below="@id/tab_favorite"
-
-        >
+        android:layout_below="@id/tab_favorite">
 
 
     </androidx.viewpager.widget.ViewPager>
